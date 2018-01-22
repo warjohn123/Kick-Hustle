@@ -1,0 +1,112 @@
+<div id="clients-page-container" class="page-layout carded fullwidth"
+     layout="row">
+
+    <!-- TOP BACKGROUND -->
+    <div class="top-bg md-accent-bg"></div>
+    <!-- / TOP BACKGROUND -->
+
+    <!-- CENTER -->
+    <div class="center" layout="column" flex>
+
+        <!-- CONTENT HEADER -->
+        <div class="header" layout="row" layout-align="space-between center">
+            <div class="white-fg" layout="column" layout-align="start start">
+                <div class="h1" layout="row" layout-align="start center">
+                    <span>Clients</span>
+                </div>
+                <!--<div class="product-count secondary-text">-->
+                <!--<span translate="EC.TOTAL_PRODUCTS">Total products:</span>-->
+                <!--<span>{{vm.products.length}}</span>-->
+                <!--</div>-->
+            </div>
+
+            <!--<div class="search" layout="row" layout-align="start center" flex>-->
+            <!--<md-icon md-font-icon="icon-magnify" class="white-text icon search-icon"></md-icon>-->
+            <!--<input id="e-commerce-products-search" class="search-input" type="text" placeholder="Search"-->
+            <!--translate translate-attr-placeholder="EC.SEARCH" flex>-->
+            <!--</div>-->
+
+            <div>
+                <md-button class="md-raised md-accent md-background"
+                           ng-click="vm.gotoAddProduct()">
+                    <span><i class="icon-plus"></i> Add Client</span>
+                </md-button>
+            </div>
+        </div>
+        <!-- / CONTENT HEADER -->
+
+        <!-- CONTENT CARD -->
+        <div class="content-card" layout="column" flex>
+            <table class="simple" ms-responsive-table>
+                <thead>
+                <tr>
+                    <th class="sortable">Name</th>
+                    <th class="sortable">Location</th>
+                    <th class="sortable">Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="client in vm.clients">
+                    <td class="clickable">{{client.name}}</td>
+                    <td>{{client.location}}</td>
+                    <td>
+                        <md-menu md-position-mode="target-right target">
+                            <md-button ng-click="$mdMenu.open($event)"
+                                       class="md-icon-button">
+                                <i class="icon-dots-horizontal"></i>
+                            </md-button>
+                            <md-menu-content width="5">
+                                <md-menu-item>
+                                    <md-button ng-click="doSomething()">
+                                        Archive
+                                    </md-button>
+                                </md-menu-item>
+                                <md-menu-item>
+                                    <md-button ng-click="doSomething()">
+                                        Edit
+                                    </md-button>
+                                </md-menu-item>
+                                <md-menu-item>
+                                    <md-button ng-click="doSomething()">
+                                        Start Trial
+                                    </md-button>
+                                </md-menu-item>
+                                <md-menu-item>
+                                    <md-button ng-click="doSomething()">
+                                        End Trial
+                                    </md-button>
+                                </md-menu-item>
+                                <md-menu-item>
+                                    <md-button ng-click="doSomething()">
+                                        Add Notes
+                                    </md-button>
+                                </md-menu-item>
+                                <md-menu-item>
+                                    <md-button ng-click="doSomething()">
+                                        Send Reminder
+                                    </md-button>
+                                </md-menu-item>
+                                <md-menu-item>
+                                    <md-button ng-click="doSomething()">
+                                        Send Message
+                                    </md-button>
+                                </md-menu-item>
+                                <md-menu-item>
+                                    <md-button ng-click="doSomething()">
+                                        Ask Feedback
+                                    </md-button>
+                                </md-menu-item>
+                                <md-menu-item>
+                                    <md-button ng-click="doSomething()">
+                                        View Details
+                                    </md-button>
+                                </md-menu-item>
+                            </md-menu-content>
+                        </md-menu>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

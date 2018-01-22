@@ -13,6 +13,26 @@
 
         // Data
 
+
+        vm.clients = [
+            {
+                name: 'Canopy Point Coffee',
+                location: 'Fort Worth'
+            },
+            {
+                name: 'Test',
+                location: 'Test'
+            },
+            {
+                name: 'Test',
+                location: 'Test'
+            },
+            {
+                name: 'Test',
+                location: 'Test'
+            }
+        ];
+
         // Methods
 
         //////////
