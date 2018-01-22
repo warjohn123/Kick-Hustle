@@ -26,6 +26,10 @@
     }
 
     .content-card {
+      
+      .clients-table {
+        overflow: scroll !important;
+      }
 
       .toolbar {
         padding: 8px;
