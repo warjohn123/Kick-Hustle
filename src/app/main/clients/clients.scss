@@ -23,12 +23,31 @@
         vertical-align: middle;
         font-size: 15px;
       }
+
+      .add-client {
+        background-color: #e67e22;
+        width: 150px;
+      }
     }
 
     .content-card {
       
       .clients-table {
         overflow: scroll !important;
+      }
+
+      table {
+        font-size: 15px;
+
+        md-menu {
+          md-button:hover {
+            background-color: rgba(158,158,158,0.1);
+          }
+        }
+
+        tbody tr:nth-child(odd) {
+          background-color: #eee;
+        }
       }
 
       .toolbar {
